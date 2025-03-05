@@ -3,12 +3,9 @@ body {
     padding-right:10%; 
     background-color: #ADD8E6;
   }
-   h1 {
-    font-size:5em;
+   h {
+    font-size:2em;
     font-family: Helvetica;
-      /* I enlarged the font of the headline text so it was immediately visible to the viewer */
- 
- 
   }
    p {
     font size: 1.2em;
@@ -19,10 +16,7 @@ body {
    #nav-bar {
   Display: flex;
   Flex-direction: row;
-  /* I formatted the nav bar to be horizontol and not vertical */
- 
- 
-  }
+   }
    .nav-button {
   Margin: auto
   }
@@ -34,9 +28,7 @@ body {
   }
    @media (orientation:portrait) {
     #content {width:100%;
-     /* I ensured that the view of the site on mobile would be easy to read */
- 
- 
     }
   }
+  
  
