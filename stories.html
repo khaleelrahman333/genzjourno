@@ -18,84 +18,44 @@
 5 Journalists Imprisoned in 2024 <link href="stories.css" type="text/css"
        rel="stylesheet">
  </h1>
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel Photo Gallery</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .carousel-container {
-            position: relative;
-            width: 60%;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel img {
-            width: 100%;
-            flex-shrink: 0;
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 50%;
-        }
-        .prev { left: 10px; }
-        .next { right: 10px; }
-    </style>
-</head>
-<body>
-    <div class="carousel-container">
-        <div class="carousel" id="carousel">
-            <img src="1.jpg" alt="Image 1">
-            <img src="2.jpg" alt="Image 2">
-            <img src="3.jpg" alt="Image 3">
-            <img src="4.jpg" alt="Image 4">
-            <img src="5.jpg" alt="Image 5">
-        </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+ 
+ <div class="carousel-container">
+    <div class="carousel" id="carousel">
+        <img src="1.jpg" alt="Image 1">
+        <img src="2.jpg" alt="Image 2">
+        <img src="3.jpg" alt="Image 3">
+        <img src="4.jpg" alt="Image 4">
+        <img src="5.jpg" alt="Image 5">
     </div>
-   
-    <script>
-        let index = 0;
-        const carousel = document.getElementById('carousel');
-        const images = document.querySelectorAll('.carousel img');
-        const totalImages = images.length;
-       
-        function moveSlide(direction) {
-            index += direction;
-            if (index < 0) {
-                index = totalImages - 1;
-            } else if (index >= totalImages) {
-                index = 0;
-            }
-            carousel.style.transform = `translateX(${-index * 100}%)`;
-        }
-    </script>
-</body>
-</html>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
 
+<script>
+    let index = 0;
+    const carousel = document.getElementById('carousel');
+    const images = document.querySelectorAll('.carousel img');
+    const totalImages = images.length;
+   
+    function moveSlide(direction) {
+        index += direction;
+        if (index < 0) {
+            index = totalImages - 1;
+        } else if (index >= totalImages) {
+            index = 0;
+        }
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+    }
+</script>
+
+<p>
+    Credit: Abby Feldman
+</p>
+ <p>
+    Learn more about courageous reporters imprisoned in 2024 who are still behind bars.
+    </p>
+  
+   
+   
+      </div>
  </body>
